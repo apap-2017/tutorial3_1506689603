@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>View Student by NPM</title>
+</head>
+<body>
+	<th:block th:switch="${status}">
+		<div th:case="'ok'">
+			<h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3>
+			<h3 th:text="'Name = ' + ${student.name}">Student Name</h3>
+			<h3 th:text="'GPA  = ' + ${student.gpa}">Student GPA</h3> 
+		</div>
+	 	<div th:case="'notfound'">
+	 		<h3 th:text="'Data tidak ditemukan'">Data student tidak ditemukan</h3>
+		</div>
+	</th:block>
+</body>
+</html>
